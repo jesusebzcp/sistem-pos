@@ -10,8 +10,10 @@ connectDb();
 
 app.use(express.json({ extended: true }));
 app.use(cors());
-
 const port = process.env.port || 3001;
+
+//Create user
+app.use("/api/create-user", require("./src/router/user"));
 
 app.listen(port, () => {
   console.log(`On server listener port ${port}`);

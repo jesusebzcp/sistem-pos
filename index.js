@@ -16,6 +16,6 @@ const port = process.env.port || 3001;
 app.use("/api/create-user", require("./src/router/user"));
 app.use("/api/login", require("./src/router/auth"));
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`On server listener port ${port}`);
 });

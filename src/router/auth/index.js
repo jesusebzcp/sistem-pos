@@ -4,8 +4,9 @@ const { check } = require("express-validator");
 const authController = require("../../controllers/authController");
 const validateToken = require("../../middleware/jwt");
 
-//Auth user
-//ENDPOINT=api/auth
+//ENDPOINT=api/login
+
+//RETURN ID USER
 
 router.post(
   "/",
